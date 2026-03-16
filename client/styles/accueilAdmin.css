@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logout {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.column {
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todo {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.doing {
+    background-color: #ffeb3b;
+    color: white;
+}
+
+.done {
+    background-color: #66cc66;
+    color: white;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: white; /* Change la couleur du texte en blanc */
+}
+
+.add-task {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-task:hover {
+    background-color: #ddd;
+}
+

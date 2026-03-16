@@ -1,0 +1,262 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  /* === Bouton logout === */
+  .logout {
+    margin-right: 1%;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    float: right;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .logout:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+  }
+  .logout:active {
+    background-color: #b03a2e;
+    transform: translateY(0);
+  }
+  
+  /* === Table === */
+  table {
+    width: 100%;
+    height: 100vh;
+    table-layout: fixed;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 10px;
+  }
+  
+  th {
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+  
+  /* === Colonnes Kanban === */
+  .task-column {
+    padding: 12px 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .todo { background-color: #ff6f61; }
+  .doing { background-color: #ffab40; }
+  .done { background-color: #4caf50; }
+  
+  /* Colonnes containers */
+  .task-column1, .task-column2, .task-column3 {
+    padding: 20px;
+    vertical-align: top;
+    min-height: 100vh;
+  }
+  
+  /* Ajout de tâche */
+  .add-task {
+    margin: auto;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Icônes */
+  .edit-icon, .delete-icon {
+    cursor: pointer;
+    margin: 0 3px;
+    font-size: 14px;
+  }
+  
+  /* Tâches */
+  .allTask {
+    border: none;
+    display: table-row;
+  }
+  .allTask td {
+    height: 1px;
+    padding: 5px 0;
+  }
+  
+  /* === Bouton tâche === */
+  .task-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #2C3E50;
+    border-radius: 8px;
+    border: 1px solid #1C2833;
+    padding: 16px 24px;
+    margin: 8px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ECF0F1;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-height: 120px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .task-button span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    text-align: center;
+    white-space: normal;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+  }
+
+  .task-actions {
+    font-size: 22px; /* au lieu de 20px */
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    gap: 10px;
+    align-items: center;
+  }
+  .task-button:hover .task-actions {
+    display: flex;
+  }
+  
+  body.read-only .task-button:hover .task-actions .edit,
+  body.read-only .task-button:hover .task-actions .delete {
+    pointer-events: none;
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  
+  .task-button:hover .task-actions .edit {
+    color: #4caf50;
+  }
+  .task-button:hover .task-actions .delete {
+    color: #f44336;
+  }
+  
+  /* Dragging */
+  .dragging {
+    color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .dragging .task-actions .edit,
+  .dragging .task-actions .delete {
+    pointer-events: none;
+    opacity: 0;
+  }
+  
+  /* === Header Kanban === */
+  #kanbanHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+  }
+  #kanbanHeader .header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  #kanbanHeader .logo-kanban {
+    width: auto;
+    height: 50px;
+    border-radius: 0;
+    object-fit: contain;
+  }
+  #kanbanHeader h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  .header-center {
+    margin-right: 11%;
+    text-align: center;
+  }
+  #timerDisplay {
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+  }
+  #startButton, #pauseButton, #resetButton {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 8px 16px;
+    margin: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  #startButton:hover { background-color: #81c784; }
+  #pauseButton:hover { background-color: #ffb74d; }
+  #resetButton:hover { background-color: #e57373; }
+  
+  /* === Responsive === */
+  @media (max-width: 950px) {
+    #kanbanHeader {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+    .header-left {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .header-center {
+      margin: 0;
+    }
+    .logout {
+      float: none;
+      align-self: center;
+      margin: 0;
+    }
+    #kanbanHeader h2 {
+      font-size: 20px;
+    }
+    #startButton, #pauseButton, #resetButton {
+      display: inline-block;
+      width: 90px;
+      margin: 4px;
+    }
+    #timerDisplay {
+      font-size: 22px;
+      margin: 5px 0;
+    }
+    .task-button span {
+      text-align: center;
+    }
+  }
+  

@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.login-container h2 {
+    color: #66cc66;
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #66cc66;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-container a {
+    margin-left: auto;
+    text-decoration: none;
+    font-size: 12px;
+}
+#motDepasseInfo {
+    color: red;                 /* Met le texte en rouge */
+    font-size: 14px;            /* Réduit la taille de la police */
+    margin-left: 20px;          /* Décale le texte vers la droite */
+    display: inline-block;      /* Permet de manipuler la position sans affecter les autres éléments */
+    font-weight: bold;          /* Met le texte en gras */
+}
+

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sprint Board – Vos Kanbans</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+    }
+
+    /* Header */
+    header {
+      background-color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #2196f3;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .logo-text {
+      font-weight: bold;
+      font-size: 1.1rem;
+      line-height: 1.2;
+    }
+
+    .user {
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .user-icon {
+      width: 32px;
+      height: 32px;
+      border: 2px solid black;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    /* Main */
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .kanban-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .kanban-header h2 {
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    .btn-create {
+      background-color: #6a4fcf;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-create:hover {
+      background-color: #5740b3;
+    }
+
+    .kanban-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .kanban-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .kanban-card h3 {
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    .card-actions {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .card-actions button {
+      background: none;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 0.4rem 0.7rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .card-actions button:hover {
+      border-color: #6a4fcf;
+      color: #6a4fcf;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/2948/2948037.png" alt="Sprint Board Logo" />
+      <div class="logo-text">
+        Sprint<br />Board
+      </div>
+    </div>
+    <div><strong>Bonjour Maao</strong></div>
+    <div class="user">
+      <div class="user-icon">👤</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="kanban-header">
+      <h2>Voici vos Kanbans</h2>
+      <button class="btn-create">+ Nouveau Kanban</button>
+    </section>
+
+    <section class="kanban-grid">
+      <div class="kanban-card">
+        <h3>Math</h3>
+        <div class="card-actions">
+          <button>Renommer</button>
+          <button>Supprimer</button>
+        </div>
+      </div>
+
+      <div class="kanban-card">
+        <h3>Français</h3>
+        <div class="card-actions">
+          <button>Renommer</button>
+          <button>Supprimer</button>
+        </div>
+      </div>
+
+      <div class="kanban-card">
+        <h3>Projet-1</h3>
+        <div class="card-actions">
+          <button>Renommer</button>
+          <button>Supprimer</button>
+        </div>
+      </div>
+
+      <div class="kanban-card">
+        <h3>Perso</h3>
+        <div class="card-actions">
+          <button>Renommer</button>
+          <button>Supprimer</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+    "name": "SprintBoard",
+    "short_name": "SprintBoard",
+    "description": "Ce site est concu pour atteindre une productifivé maximal en aliant méthode de travail pomodoro et méthode scrum !",
+    "start_url": "login.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#90caf9",
+    "icons": [
+        {
+            "src": "images/logoSimple.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/logoSimple.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

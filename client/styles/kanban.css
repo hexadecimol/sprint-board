@@ -1,0 +1,195 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-bottom: 2px solid #2196f3;
+  position: relative; /* permet un positionnement + simple si besoin */
+  flex-wrap: nowrap; /* on évite que tout passe à la ligne */
+  flex-direction: row;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: auto;
+  height: 50px;
+  border-radius: 0; /* plus de cercle */
+  object-fit: contain;
+}
+.logo-text {
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.user {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-icon {
+  width: 32px;
+  height: 32px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Main */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.kanban-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.kanban-header h2 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.btn-create {
+  background-color: #6a4fcf;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-create:hover {
+  background-color: #5740b3;
+}
+
+.kanban-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.kanban-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kanban-card h3 {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.card-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-actions button {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.card-actions button:hover {
+  border-color: #6a4fcf;
+  color: #6a4fcf;
+}
+.kanban-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer; /* 👈 Rend la carte cliquable */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kanban-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hello {
+  
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+  order: 1; /* force à apparaître après les autres éléments */
+}
+
+.logout {
+  margin-right: 1%;
+  background-color: #6a4fcf; /* Rouge doux pour ne pas être trop agressif */
+  color: white; /* Texte blanc pour un bon contraste */
+  border: none; /* Pas de bordure visible */
+  padding: 12px 25px; /* Un peu plus d’espace horizontal pour un effet plus équilibré */
+  cursor: pointer; /* Curseur en forme de main */
+  float: right; /* Alignement à droite */
+  transition: background-color 0.3s, transform 0.2s ease-in-out; /* Animation fluide */
+  border-radius: 8px; /* Coins plus arrondis pour un look moderne */
+  font-size: 16px; /* Taille de texte confortable */
+  font-weight: 600; /* Légèrement plus épais pour le rendre plus visible */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour de la profondeur */
+}
+
+/* Effet au survol */
+.logout:hover {
+  background-color: #c0392b; /* Rouge plus foncé pour l’effet de survol */
+  transform: translateY(-2px); /* Légère élévation du bouton au survol */
+}
+
+/* Effet au clic */
+.logout:active {
+  background-color: #b03a2e; /* Un rouge encore plus foncé pour l’effet de clic */
+  transform: translateY(0); /* Retourne à la position d'origine quand on clique */
+}
+header {
+  flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+}
+
+.hello {
+  width: 100%;         /* Prend toute la largeur */
+  text-align: center;  /* Centre le texte */
+  margin-top: 0.5rem;  /* Espacement au-dessus */
+}

@@ -1,0 +1,79 @@
+<DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compagnon - Scrum</title>
+    <link rel="icon" type="image/png" href="images/logoSprintBoard.png">
+    <link rel="stylesheet" href="styles/accueilClient.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="javascripts/serviceHttp.js"></script>
+    <script src="javascripts/accueilClient.js"></script>
+    <script src="javascripts/connectivity.js" defer></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').then(function (reg) {
+                // registration worked
+                console.log('Registration succeeded. Scope is ' + reg.scope);
+            }).catch(function (error) {
+                // registration failed
+                console.log('Registration failed with ' + error);
+            });
+        };
+    </script>
+</head>
+<body>
+    <header id="kanbanHeader">
+        <div class="header-left">
+            <a href="kanban.html" class="logo-link">
+                <img src="images/logoSprintBoard.png" alt="Logo" class="logo-kanban" />
+              </a>
+            <h2>Kanban : <span id="kanbanName">Chargement...</span></h2>
+        </div>
+    
+        <div class="header-center">
+            <p id="timerDisplay">25:00</p>
+            <button id="startButton" onClick="accueilClientInstance.startPomodoro()">Démarrer</button>
+            <button id="pauseButton" onClick="accueilClientInstance.pausePomodoro()">Pause</button>
+            <button id="resetButton" onClick="accueilClientInstance.resetPomodoro()">Prochain</button>
+        </div>
+    
+        <button class="logout" onClick="accueilClientInstance.logout()">Déconnecter</button>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="todo task-column">To do</th>
+                <th class="doing task-column">Doing</th>
+                <th class="done task-column">Done</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="allTask">
+                <td class="task-column">
+                    <button class="add-task" onClick="accueilClientInstance.newTaskToDo(1)">+ ajouter une tâche</button>
+                </td>
+                <td class="task-column">
+                    <button class="add-task" onClick="accueilClientInstance.newTaskToDo(2)">+ ajouter une tâche</button>
+                </td>
+                <td class="task-column">
+                    <button class="add-task" onClick="accueilClientInstance.newTaskToDo(3)">+ ajouter une tâche</button>
+                </td>
+            </tr>
+                <tr>
+                    <td class="task-column1" onDrop="accueilClientInstance.drop(event)">
+                       
+                    </td>
+                    <td class="task-column2" onDrop="accueilClientInstance.drop(event)">
+                        
+                    </td>
+                    <td class="task-column3" onDrop="accueilClientInstance.drop(event)">
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+    </html>
